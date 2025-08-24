@@ -1,0 +1,692 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDEDRACK | Premium Men's Fashion & Accessories</title>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.0.0/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.0.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .adidas-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1a237e 100%);
+        }
+        .gucci-gold {
+            color: #b28d00;
+        }
+        .apple-white {
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .cart-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <h1 class="text-2xl font-bold brand-font text-black">BRANDEDRACK</h1>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#shirts" class="text-gray-700 hover:text-black transition duration-300">Shirts</a>
+                    <a href="#wallets" class="text-gray-700 hover:text-black transition duration-300">Wallets</a>
+                    <a href="#watches" class="text-gray-700 hover:text-black transition duration-300">Watches</a>
+                    <a href="#eyewear" class="text-gray-700 hover:text-black transition duration-300">Eyewear</a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="p-2 text-gray-600 hover:text-black transition duration-300">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <button class="p-2 text-gray-600 hover:text-black relative transition duration-300">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs cart-badge">3</span>
+                </button>
+                <button class="md:hidden p-2 text-gray-600 hover:text-black transition duration-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-[70vh] flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 brand-font">Premium Style Redefined</h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Discover our curated collection of luxury men's fashion and accessories.</p>
+            <button class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                Shop Now <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16 apple-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 brand-font text-gray-900">Shop by Category</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="category-card adidas-gradient rounded-lg overflow-hidden shadow-lg cursor-pointer group" onclick="window.location.href='#shirts'">
+                    <img src="https://images.unsplash.com/photo-1505740461282-5cddfdfe45f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Shirts" class="w-full h-48 object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Shirts</h3>
+                        <p class="text-sm opacity-80">10 Premium Designs</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="font-bold">$89 - $199</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card bg-gray-900 rounded-lg overflow-hidden shadow-lg cursor-pointer group" onclick="window.location.href='#wallets'">
+                    <img src="https://images.unsplash.com/photo-1581081848147-97b7e08e1dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Wallets" class="w-full h-48 object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Wallets</h3>
+                        <p class="text-sm opacity-80">5 Exclusive Styles</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="font-bold">$129 - $249</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card bg-black rounded-lg overflow-hidden shadow-lg cursor-pointer group" onclick="window.location.href='#watches'">
+                    <img src="https://images.unsplash.com/photo-1529636928276-ffbbf8b4fcf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Watches" class="w-full h-48 object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Watches</h3>
+                        <p class="text-sm opacity-80">8 Timepiece Models</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="font-bold">$299 - $999</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer group" onclick="window.location.href='#eyewear'">
+                    <img src="https://images.unsplash.com/photo-1541846013-ec77f0ea7b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Eyewear" class="w-full h-48 object-cover">
+                    <div class="p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-2">Eyewear</h3>
+                        <p class="text-sm opacity-80">4 Collections</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="font-bold">$189 - $349</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shirts Section -->
+    <section id="shirts" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 brand-font text-gray-900">Premium Shirts Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1536679549362-5a9b9b7c6e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Premium Cotton Shirt" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            New Arrival
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Premium Cotton Shirt</h3>
+                        <p class="text-gray-600 text-sm mb-3">Classic fit with premium cotton fabric</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$129</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Slim Fit Dress Shirt" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Best Seller
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Slim Fit Dress Shirt</h3>
+                        <p class="text-gray-600 text-sm mb-3">Perfect for business meetings and formal events</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$159</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1612265593828-aae6b0a7c5e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Casual Button Down" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Limited Edition
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Casual Button Down</h3>
+                        <p class="text-gray-600 text-sm mb-3">Comfortable and stylish for everyday wear</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$119</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560731150-56bfb7626a32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Patterned Shirt" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Sale
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Patterned Shirt</h3>
+                        <p class="text-gray-600 text-sm mb-3">Bold patterns for the fashion-forward man</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$99 <span class="line-through text-gray-500 text-sm">$129</span></span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallets Section -->
+    <section id="wallets" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 brand-font text-gray-900">Exclusive Wallet Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1608631773953-8f5d8c7e9b1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Luxury Leather Wallet" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Best Seller
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Luxury Leather Wallet</h3>
+                        <p class="text-gray-600 text-sm mb-3">Handcrafted Italian leather with RFID protection</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$199</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1579896460368-e121fb1ee5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Minimalist Card Holder" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Limited Edition
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Minimalist Card Holder</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sleek design for essential cards only</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$149</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581091848147-97b7e08e1dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Bifold Leather Wallet" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            New Arrival
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Bifold Leather Wallet</h3>
+                        <p class="text-gray-600 text-sm mb-3">Classic bifold design with multiple compartments</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$169</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581081848147-97b7e08e1dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Trifold Wallet" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Sale
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Trifold Wallet</h3>
+                        <p class="text-gray-600 text-sm mb-3">More capacity with trifold design</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$179 <span class="line-through text-gray-500 text-sm">$219</span></span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watches Section -->
+    <section id="watches" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 brand-font text-gray-900">Timepiece Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1529636928276-ffbbf8b4fcf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Sports Chronograph Watch" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-blue-500 text-white px-3py-1 rounded-full text-sm font-semibold">
+                            Best Seller
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Sports Chronograph Watch</h3>
+                        <p class="text-gray-600 text-sm mb-3">Water resistant up to 100m with stainless steel case</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$349</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581091848147-97b7e08e1dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Classic Analog Watch" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Limited Edition
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Classic Analog Watch</h3>
+                        <p class="text-gray-600 text-sm mb-3">Timeless design with leather strap</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$599</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1529636928276-ffbbf8b4fcf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Smartwatch Pro" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            New Arrival
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Smartwatch Pro</h3>
+                        <p class="text-gray-600 text-sm mb-3">Advanced fitness tracking with smart features</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$899</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581091848147-97b7e08e1dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Dress Watch" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Sale
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Dress Watch</h3>
+                        <p class="text-gray-600 text-sm mb-3">Elegant timepiece for formal occasions</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$749 <span class="line-through text-gray-500 text-sm">$899</span></span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eyewear Section -->
+    <section id="eyewear" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 brand-font text-gray-900">Eyewear Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541846013-ec77f0ea7b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Designer Sunglasses" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Best Seller
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Designer Sunglasses</h3>
+                        <p class="text-gray-600 text-sm mb-3">Polarized lenses with UV400 protection</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$249</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541846013-ec77f0ea7b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Reading Glasses" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Limited Edition
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Reading Glasses</h3>
+                        <p class="text-gray-600 text-sm mb-3">Blue light blocking technology</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$189</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541846013-ec77f0ea7b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Aviator Sunglasses" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            New Arrival
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Aviator Sunglasses</h3>
+                        <p class="text-gray-600 text-sm mb-3">Classic aviator style with metal frame</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$349</span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541846013-ec77f0ea7b82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Wayfarer Sunglasses" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+                            <i class="far fa-heart text-gray-600"></i>
+                        </button>
+                        <div class="absolute bottom-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Sale
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">Wayfarer Sunglasses</h3>
+                        <p class="text-gray-600 text-sm mb-3">Trendy wayfarer style with acetate frame</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-lg">$189 <span class="line-through text-gray-500 text-sm">$229</span></span>
+                            <button class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 brand-font">Stay Updated</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Subscribe to receive exclusive offers, style tips, and new arrivals.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 rounded-l-full focus:outline-none text-gray-900">
+                <button type="submit" class="bg-black text-white px-6 py-3 rounded-r-full hover:bg-gray-800 transition duration-300">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 brand-font">BRANDEDRACK</h3>
+                    <p class="text-gray-400 mb-4">Premium men's fashion and accessories for the modern gentleman.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#shirts" class="text-gray-400 hover:text-white transition duration-300">All Products</a></li>
+                        <li><a href="#new-arrivals" class="text-gray-400 hover:text-white transition duration-300">New Arrivals</a></li>
+                        <li><a href="#best-sellers" class="text-gray-400 hover:text-white transition duration-300">Best Sellers</a></li>
+                        <li><a href="#sale-items" class="text-gray-400 hover:text-white transition duration-300">Sale Items</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Account</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">My Account</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Order History</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Wishlist</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 mb-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2023 BRANDEDRACK. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Premium Cotton Shirt</h3>
+                    <button id="closeQuickView" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://picsum.photos/seed/shirt-detail/600/800.jpg" alt="Premium Cotton Shirt" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Description</h4>
+                            <p class="text-gray-600">Crafted from premium Egyptian cotton, this classic button-down shirt features a tailored fit with attention to detail in every stitch. Perfect for both casual and formal occasions.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Size Guide</h4>
+                            <div class="grid grid-cols-5 gap-2 text-center">
+                                <div class="border border-gray-300 p-2 rounded">XS</div>
+                                <div class="border border-gray-300 p-2 rounded">S</div>
+                                <div class="border border-gray-300 p-2 rounded bg-black text-white">M</div>
+                                <div class="border border-gray-300 p-2 rounded">L</div>
+                                <div class="border border-gray-300 p-2 rounded">XL</div>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2">Color Options</h4>
+                            <div class="flex space-x-2">
+                                <div class="w-8 h-8 bg-white border-2 border-black rounded-full cursor-pointer"></div>
+                                <div class="w-8 h-8 bg-blue-600 rounded-full cursor-pointer"></div>
+                                <div class="w-8 h-8 bg-black rounded-full cursor-pointer"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">$129</span>
+                            <div class="flex space-x-3">
+                                <button class="bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition duration-300">
+                                    <i class="fas fa-heart mr-2"></i>Add to Wishlist
+                                </button>
+                                <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Quick View Modal Functionality
+        const quickViewModal = document.getElementById('quickViewModal');
+        const closeQuickView = document.getElementById('closeQuickView');
+        
+        // Open modal when clicking on product card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('button')) {
+                    quickViewModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        // Close modal
+        closeQuickView.addEventListener('click', () => {
+            quickViewModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        quickViewModal.addEventListener('click', (e) => {
+            if (e.target === quickViewModal) {
+                quickViewModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.fa-bars');
+        const navMenu = document.querySelector('nav');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
