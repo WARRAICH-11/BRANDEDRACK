@@ -1,4 +1,4 @@
 node_modules
-dist
+# dist - Commented out to allow GitHub Pages deployment
 .env
 .env.local

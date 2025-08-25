@@ -1,0 +1,1 @@
+import{j as t}from"./index-Ba5zIE7n.js";function l(){return t.jsxs("div",{className:"container mx-auto px-4 py-12",children:[t.jsx("h2",{className:"text-3xl font-bold mb-6 brand-font",children:"Wallets"}),t.jsx("p",{children:"All about wallets here."})]})}export{l as default};

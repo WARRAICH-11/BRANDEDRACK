@@ -7,11 +7,11 @@ import ProductGrid from '../components/ProductGrid'
 const LenixCanvas = lazy(() => import('../components/LenixCanvas'))
 
 import { products } from '../utils/products'
-const heroImage = '/assets/HERO.png';
-const shirtsImg = '/assets/shirts1.jpg';
-const walletsImg = '/assets/wallets1.jpg';
-const watchesImg = '/assets/watches1.jpg';
-const eyewearImg = '/assets/eyewear1.jpg';
+const heroImage = `${import.meta.env.BASE_URL}assets/HERO.png`;
+const shirtsImg = `${import.meta.env.BASE_URL}assets/shirts1.jpg`;
+const walletsImg = `${import.meta.env.BASE_URL}assets/wallets1.jpg`;
+const watchesImg = `${import.meta.env.BASE_URL}assets/watches1.jpg`;
+const eyewearImg = `${import.meta.env.BASE_URL}assets/eyewear1.jpg`;
 
 
 export default function Home() {

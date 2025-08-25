@@ -1,0 +1,1 @@
+import{j as o}from"./index-Ba5zIE7n.js";function i(){return o.jsxs("div",{className:"container mx-auto px-4 py-12",children:[o.jsx("h2",{className:"text-3xl font-bold mb-6 brand-font",children:"Cookie Policy"}),o.jsx("p",{children:"Cookie policy info here."})]})}export{i as default};

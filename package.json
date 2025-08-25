@@ -2,10 +2,13 @@
   "name": "brandedrack-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://warraich-11.github.io/BRANDEDRACK/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "2.1.0",
@@ -19,6 +22,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.1",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
     "vite": "^5.4.19",

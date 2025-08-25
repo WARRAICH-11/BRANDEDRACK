@@ -1,13 +1,14 @@
 // src/utils/products.js
 // Centralized product data for the store
 
-// Product images from public directory
-const shirt1Img = '/assets/shirts1.jpg';
-const shirt2Img = '/assets/shirts2.jpg';
-const shirt3Img = '/assets/shirts3.jpg';
-const wallet1Img = '/assets/wallets1.jpg';
-const watch1Img = '/assets/watches1.jpg';
-const eyewear1Img = '/assets/eyewear1.jpg';
+// Product images with base URL for GitHub Pages
+const baseUrl = import.meta.env.BASE_URL;
+const shirt1Img = `${baseUrl}assets/shirts1.jpg`;
+const shirt2Img = `${baseUrl}assets/shirts2.jpg`;
+const shirt3Img = `${baseUrl}assets/shirts3.jpg`;
+const wallet1Img = `${baseUrl}assets/wallets1.jpg`;
+const watch1Img = `${baseUrl}assets/watches1.jpg`;
+const eyewear1Img = `${baseUrl}assets/eyewear1.jpg`;
 
 export const products = [
   { 
