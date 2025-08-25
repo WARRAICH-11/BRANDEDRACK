@@ -13,7 +13,7 @@
 
 body{ font-family: 'Inter', sans-serif; background: var(--bg) }
 .brand-font{ font-family: 'Playfair Display', serif; }
-.hero-section{ background-image: url('/assets/eyewear1.jpg'); background-size: cover; background-position: center; }
+.hero-section{ background-image: url('/assets/HERO.png'); background-size: cover; background-position: center; }
 .product-card:hover{ transform: translateY(-6px); }
 
 /* small helpers */
