@@ -7,22 +7,31 @@ import ProductGrid from '../components/ProductGrid'
 const LenixCanvas = lazy(() => import('../components/LenixCanvas'))
 
 import { products } from '../utils/products'
+const heroImage = '/assets/HERO.png';
+const shirtsImg = '/assets/shirts1.jpg';
+const walletsImg = '/assets/wallets1.jpg';
+const watchesImg = '/assets/watches1.jpg';
+const eyewearImg = '/assets/eyewear1.jpg';
 
 
 export default function Home() {
   const categories = [
-    { id: 'shirts', title: 'Shirts', img: '/assets/shirts1.jpg' },
-    { id: 'wallets', title: 'Wallets', img: '/assets/wallets1.jpg' },
-    { id: 'watches', title: 'Watches', img: '/assets/watches1.jpg' },
-    { id: 'eyewear', title: 'Eyewear', img: '/assets/eyewear1.jpg' },
-  ]; // Make sure these images exist in the assets folder
+    { id: 'shirts', title: 'Shirts', img: shirtsImg },
+    { id: 'wallets', title: 'Wallets', img: walletsImg },
+    { id: 'watches', title: 'Watches', img: watchesImg },
+    { id: 'eyewear', title: 'Eyewear', img: eyewearImg },
+  ];
   const navigate = useNavigate();
   return (
     <div>
       {/* hero */}
-      <section className="hero-section h-[95vh] min-h-[700px] flex items-center justify-center relative overflow-hidden">
+      <section className="h-[95vh] min-h-[700px] flex items-center justify-center relative overflow-hidden">
         {/* Background Image */}
-        <img src="/assets/HERO.png" alt="Hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img 
+          src={heroImage} 
+          alt="Hero" 
+          className="absolute inset-0 w-full h-full object-cover object-center" 
+        />
         {/* Animated Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-indigo-700/30 to-black/80 animate-gradient-move"></div>
         {/* Animated Floating Particles */}
